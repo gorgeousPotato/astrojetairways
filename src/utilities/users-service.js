@@ -6,8 +6,8 @@ export async function signUp(userData) {
   localStorage.setItem('token', token)
   return getUser()
 }
-export async function login(userData) {
-  const token = await usersAPI.signUp(userData);
+export async function login(credentials) {
+  const token = await usersAPI.login(credentials);
   localStorage.setItem('token', token)
   return getUser()
 }
