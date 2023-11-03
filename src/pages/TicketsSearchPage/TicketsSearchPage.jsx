@@ -1,6 +1,7 @@
 import { useState } from "react";
-
-import "./TicketsSearchPage.css"
+import { Navigate } from "react-router-dom";
+import * as ticketsAPI from "../../utilities/tickets-api";
+import "./TicketsSearchPage.css";
 
 export default function TicketsSearchPage() {
   const [info, setInfo] = useState({
@@ -8,13 +9,20 @@ export default function TicketsSearchPage() {
     arrival: '',
     depDate: '',
     passengers: '',
-  })
+  });
+  const [found, setFound] = useState(false);
   function handleChange(evt) {
     setInfo({...info, [evt.target.name]: evt.target.value})
   }
+  async function handleSearch(evt) {
+    evt.preventDefault();
+    const newSearchData = {...info};
+    const tickets = await ticketsAPI.search(newSearchData);
+    setFound(true);
+  }
   return (
     <div className="TicketsSearchPage">
-      <form>
+      <form onSubmit={handleSearch}>
         <label>Planet of Departure</label>
         <input name="departure" value={info.departure} onChange={handleChange}></input>
         <label>Planet of Arrival</label>
@@ -35,6 +43,7 @@ export default function TicketsSearchPage() {
         </select>
         <button type="submit">Search</button>
       </form>
+      {found && <h1>Found!</h1>}
     </div>
   );
 }
