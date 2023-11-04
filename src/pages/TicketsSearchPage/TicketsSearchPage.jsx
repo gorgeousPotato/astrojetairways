@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { Navigate } from "react-router-dom";
-import * as ticketsAPI from "../../utilities/tickets-api";
+import * as flightsAPI from "../../utilities/flights-api";
 import "./TicketsSearchPage.css";
 
 export default function TicketsSearchPage() {
@@ -17,7 +17,7 @@ export default function TicketsSearchPage() {
   async function handleSearch(evt) {
     evt.preventDefault();
     const newSearchData = {...info};
-    const tickets = await ticketsAPI.search(newSearchData);
+    const tickets = await flightsAPI.search(newSearchData);
     setFound(true);
   }
   return (

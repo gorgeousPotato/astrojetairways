@@ -1,5 +1,5 @@
 import sendRequest from './send-request';
-const BASE_URL = '/api/tickets';
+const BASE_URL = '/api/flights';
 
 // // Refactored code below
 // export function signUp(userData) {
