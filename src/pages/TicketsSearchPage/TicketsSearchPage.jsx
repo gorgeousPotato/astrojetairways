@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { Navigate } from "react-router-dom";
 import * as flightsAPI from "../../utilities/flights-api";
+import FlightsContainer from "../../components/FlightsContainer/FlightsContainer";
 import "./TicketsSearchPage.css";
 
 export default function TicketsSearchPage() {
@@ -11,14 +12,16 @@ export default function TicketsSearchPage() {
     passengers: '',
   });
   const [found, setFound] = useState(false);
+  const [flights, setFlights] = useState([]);
   function handleChange(evt) {
     setInfo({...info, [evt.target.name]: evt.target.value})
   }
   async function handleSearch(evt) {
     evt.preventDefault();
-    const newSearchData = {...info};
-    const tickets = await flightsAPI.search(newSearchData);
+    const url = `/api/search?departure=${info.departure}&arrival=${info.arrival}&date=${info.depDate}`;
+    const result = await flightsAPI.search(url);
     setFound(true);
+    setFlights(result);
   }
   return (
     <div className="TicketsSearchPage">
@@ -43,7 +46,8 @@ export default function TicketsSearchPage() {
         </select>
         <button type="submit">Search</button>
       </form>
-      {found && <h1>Found!</h1>}
+      {found && <FlightsContainer flights={flights}/>}
+
     </div>
   );
 }

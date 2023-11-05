@@ -14,6 +14,6 @@ const BASE_URL = '/api/flights';
 //   return sendRequest(`${BASE_URL}/check-token`)
 // }
 
-export function search(data) {
-  return sendRequest(BASE_URL, 'GET', data);
+export function search(url) {
+  return sendRequest(url, 'GET');
 }
