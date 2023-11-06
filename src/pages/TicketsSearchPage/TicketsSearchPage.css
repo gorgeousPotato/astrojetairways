@@ -1,3 +1,125 @@
 .TicketsSearchPage {
   margin-top: 2rem;
 }
+
+.TicketsSearchPage form {
+  /* display: flex;
+  flex-direction: column; */
+  text-align: left;
+  margin: 0 1.2rem;
+  background: black;
+  padding: 1.6rem;
+  border-radius: 2rem;;
+  
+
+}
+
+.TicketsSearchPage input {
+  font-size: 1.6rem;
+  border:none;
+  border-radius: 100px;
+  padding: .4rem 2rem;
+  margin-right: 1rem;
+  box-shadow: 2px 2px 5px rgb(255, 255, 255, .2);
+}
+
+.TicketsSearchPage select {
+  font-size: 1.6rem;
+  border:none;
+  border-radius: 100px;
+  padding: .4rem 2rem;
+}
+
+.TicketsSearchPage button {
+  font-size: 1.6rem;
+  margin-top: 3rem;
+  border: none;
+  background-color: var(--tertiary);
+  border-radius: 100px;
+  padding: .4rem 2rem;
+}
+
+.TicketsSearchPage label {
+  margin-top: .4rem;
+}
+
+.TicketsSearchPage .flex-col {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+
+.rocket input {
+  padding-left: 3rem;
+}
+
+.TicketsSearchPage i {
+  position: absolute; 
+  left: 15px; 
+  top: 3.4rem; 
+  color: gray;
+}
+
+.TicketsSearchPage .inputs-container {
+  display: flex;
+  justify-content: space-between;
+
+}
+
+.TicketsSearchPage .button-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.TicketsSearchPage button:hover {
+  background-color: var(--secondary);
+}
+
+
+
+
+
+@media (max-width: 801px) {
+  .TicketsSearchPage {
+    margin-top: 2rem;
+  }
+  
+  .TicketsSearchPage form {
+    text-align: left;
+    margin: 0 1.2rem;
+  }
+
+  .TicketsSearchPage .inputs-container {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .TicketsSearchPage input {
+    font-size: 1.6rem;
+    border:none;
+    border-radius: 100px;
+    padding: .4rem 2rem;
+  }
+  
+  .TicketsSearchPage select {
+    font-size: 1.6rem;
+    border:none;
+    border-radius: 100px;
+    padding: .4rem 2rem;
+  }
+  
+  .TicketsSearchPage button {
+    font-size: 1.6rem;
+    margin-top: 3rem;
+    border: none;
+    background-color: var(--tertiary);
+    border-radius: 100px;
+  }
+  
+  .TicketsSearchPage label {
+    margin-top: .4rem;
+  }
+
+} 
+

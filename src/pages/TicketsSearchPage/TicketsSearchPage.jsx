@@ -26,27 +26,41 @@ export default function TicketsSearchPage() {
   return (
     <div className="TicketsSearchPage">
       <form onSubmit={handleSearch}>
-        <label>Planet of Departure</label>
-        <input name="departure" value={info.departure} onChange={handleChange}></input>
-        <label>Planet of Arrival</label>
-        <input name="arrival" value={info.arrival} onChange={handleChange}></input>
-        <label>Depart</label>
-        <input name="depDate" type='date' value={info.depDate} onChange={handleChange}></input>
-        <label>Passengers</label>
-        <select name="passengers" id="" value={info.passengers} onChange={handleChange}>
-          <option>1</option>
-          <option>2</option>
-          <option>3</option>
-          <option>4</option>
-          <option>5</option>
-          <option>6</option>
-          <option>7</option>
-          <option>8</option>
-          <option>9</option>
-        </select>
-        <button type="submit">Search</button>
+        <div className="inputs-container">
+        <div className="flex-col  rocket">
+          <label>Planet of Departure</label>
+          <input name="departure" value={info.departure} onChange={handleChange}></input>
+          <i class="fa-solid fa-rocket fa-xl"></i>
+        </div>
+        <div className="flex-col rocket">
+          <label>Planet of Arrival</label>
+          <input name="arrival" value={info.arrival} onChange={handleChange}></input>
+          <i class="fa-solid fa-rocket fa-flip-vertical fa-xl"></i>
+        </div>
+        <div className="flex-col">
+          <label>Depart</label>
+          <input name="depDate" type='date' value={info.depDate} onChange={handleChange}></input>
+        </div>
+        </div>
+        <div className="button-container">
+          <div className="flex-col">
+            <label>Passengers</label>
+            <select name="passengers" id="" value={info.passengers} onChange={handleChange}>
+              <option>1</option>
+              <option>2</option>
+              <option>3</option>
+              <option>4</option>
+              <option>5</option>
+              <option>6</option>
+              <option>7</option>
+              <option>8</option>
+              <option>9</option>
+            </select>
+          </div>
+          <button type="submit">Search</button>
+        </div>
       </form>
-      {found && <FlightsContainer flights={flights}/>}
+      {found ? <FlightsContainer flights={flights}/> : <h3>No flights on {info.depDate}</h3>}
 
     </div>
   );
