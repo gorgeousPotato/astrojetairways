@@ -60,7 +60,7 @@ export default function TicketsSearchPage() {
           <button type="submit">Search</button>
         </div>
       </form>
-      {found ? <FlightsContainer flights={flights}/> : <h3>No flights on {info.depDate}</h3>}
+      {found && <FlightsContainer flights={flights} date={info.depDate}/>}
 
     </div>
   );
