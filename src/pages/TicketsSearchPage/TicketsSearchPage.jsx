@@ -9,7 +9,7 @@ export default function TicketsSearchPage() {
     departure: '',
     arrival: '',
     depDate: '',
-    passengers: '',
+    passengers: '1',
   });
   const [found, setFound] = useState(false);
   const [flights, setFlights] = useState([]);
@@ -30,12 +30,12 @@ export default function TicketsSearchPage() {
         <div className="flex-col  rocket">
           <label>Planet of Departure</label>
           <input name="departure" value={info.departure} onChange={handleChange}></input>
-          <i class="fa-solid fa-rocket fa-xl"></i>
+          <i class="fa-solid fa-rocket fa-xl input-i"></i>
         </div>
         <div className="flex-col rocket">
           <label>Planet of Arrival</label>
           <input name="arrival" value={info.arrival} onChange={handleChange}></input>
-          <i class="fa-solid fa-rocket fa-flip-vertical fa-xl"></i>
+          <i class="fa-solid fa-rocket fa-flip-vertical fa-xl input-i"></i>
         </div>
         <div className="flex-col">
           <label>Depart</label>
@@ -45,7 +45,7 @@ export default function TicketsSearchPage() {
         <div className="button-container">
           <div className="flex-col">
             <label>Passengers</label>
-            <select name="passengers" id="" value={info.passengers} onChange={handleChange}>
+            <select name="passengers" id="" value={info.passengers} onChange={handleChange} default="1">
               <option>1</option>
               <option>2</option>
               <option>3</option>
@@ -60,7 +60,7 @@ export default function TicketsSearchPage() {
           <button type="submit">Search</button>
         </div>
       </form>
-      {found && <FlightsContainer flights={flights} date={info.depDate}/>}
+      {found && <FlightsContainer flights={flights} date={info.depDate} passengers={info.passengers}/>}
 
     </div>
   );

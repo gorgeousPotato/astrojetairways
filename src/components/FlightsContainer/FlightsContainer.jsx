@@ -1,9 +1,9 @@
 import "./FlightsContainer.css"
 import FlightCard from "../FlightCard/FightCard";
 
-export default function FlightsContainer({flights, date}) {
+export default function FlightsContainer({flights, date, passengers}) {
     const flightsList = flights.map((flight, id) => {
-      return <FlightCard flight={flight} key={id}/>
+      return <FlightCard flight={flight} key={id} passengers={passengers}/>
     })
   return (
     <div className="FlightsContainer">

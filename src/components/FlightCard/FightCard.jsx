@@ -1,6 +1,7 @@
+import {Link} from "react-router-dom"
 import "./FlightCard.css"
 
-export default function FlightCard({flight}) {
+export default function FlightCard({flight, passengers}) {
   function getTime(ISOdate) {
     const date = new Date(ISOdate);
     const hours = date.getHours().toString().padStart(2, '0');  
@@ -13,23 +14,34 @@ export default function FlightCard({flight}) {
   const hours = Math.floor(timeDifference / (60*60*1000));
   timeDifference -= hours * (60*60*1000);
   const minutes = Math.floor(timeDifference / (60*1000));
+  const priceE = flight.ecoPrice * passengers;
+  const priceB = flight.busPrice * passengers;
   return (
     <div className="FlightCard">
       <div className="flex-row">
-        <div>
-          <h3>{flight.departure}</h3>
-          <h3>{getTime(flight.depDate)}</h3>
+        <div className="flex-icon">
+          <i class="fa-solid fa-rocket fa-xl icon-2"></i>
+          <div>
+            <h3>{flight.departure}</h3>
+            <h3>{getTime(flight.depDate)}</h3>
+          </div>
+        </div>
+        <div className="flex-icon">
+          <i class="fa-solid fa-rocket fa-flip-vertical fa-xl icon-2"></i>
+          <div>
+            <h3>{flight.arrival}</h3>
+            <h3>{getTime(flight.arrDate)}</h3>
+          </div>
         </div>
         <div>
-          <h3>{flight.arrival}</h3>
-          <h3>{getTime(flight.arrDate)}</h3>
-        </div>
-        <div>
-          <p>Economy - ${flight.ecoPrice}</p>
-          <p>Business - ${flight.busPrice}</p>
+          <p>Economy - ${priceE}</p>
+          <p>Business - ${priceB}</p>
         </div>
       </div>
-      <p>Flight duration - {hours} hours {minutes} minutes</p>
+      <div className="details">
+        <p>Flight duration - {hours} hours {minutes} minutes</p>
+        <Link to="#">Details</Link>
+      </div>
     </div>
   );
 

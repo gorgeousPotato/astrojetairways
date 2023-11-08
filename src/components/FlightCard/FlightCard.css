@@ -2,6 +2,7 @@
   background-color: var(--primary);
   padding: 1.6rem;
   border-radius: 2rem;
+  margin-bottom: 1rem;
 }
 
 
@@ -9,8 +10,26 @@
   display: flex;
   flex-direction: row;
   align-items: center;
+  justify-content: space-between;
 }
 
 .FlightCard .flex-row div {
   margin-right: 3rem;
 }
+
+.FlightCard .flex-icon {
+  display: flex;
+  align-items: center;
+}
+
+.FlightCard .icon-2 {
+  margin: 1rem;
+}
+
+.FlightCard .details {
+  display: flex;
+  justify-content: space-between;
+  margin: 2rem 2rem .5rem;
+  align-items: center;
+}
+
