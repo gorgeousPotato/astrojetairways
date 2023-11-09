@@ -2,6 +2,8 @@ const mongoose = require('mongoose');
 const Schema = mongoose.Schema;
 
 const flightSchema = new Schema({
+  spaceportD: {type: String},
+  spaceportA: {type: String},
   flightN: {type: Number},
   departure: {type: String},
   arrival: {type: String},

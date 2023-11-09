@@ -1,0 +1,31 @@
+.FlightDetail .grid-container{
+  width: 50%;
+  height: 15rem;
+  display: grid;
+  grid-template-columns: 1fr 2fr 3fr;
+  margin-top: 2rem;
+}
+
+.FlightDetail {
+  text-align: left;
+}
+
+
+.FlightDetail .duration {
+  display: flex;
+  align-items: center;
+}
+
+.FlightDetail .graph {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  border-left: 1px solid white;
+  padding-left: 1rem;
+}
+
+.FlightDetail .info {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}

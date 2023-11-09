@@ -1,7 +1,10 @@
-import {Link} from "react-router-dom"
+import {Link} from "react-router-dom";
+import {useState} from "react";
+import FlightDetail from "../FlightDetail/FlightDetail";
 import "./FlightCard.css"
 
 export default function FlightCard({flight, passengers}) {
+  const [details, setDetails] = useState("false");
   function getTime(ISOdate) {
     const date = new Date(ISOdate);
     const hours = date.getHours().toString().padStart(2, '0');  
@@ -16,6 +19,9 @@ export default function FlightCard({flight, passengers}) {
   const minutes = Math.floor(timeDifference / (60*1000));
   const priceE = flight.ecoPrice * passengers;
   const priceB = flight.busPrice * passengers;
+  function handleClick() {
+    !details ? setDetails(true) : setDetails(false);
+  }
   return (
     <div className="FlightCard">
       <div className="flex-row">
@@ -40,8 +46,9 @@ export default function FlightCard({flight, passengers}) {
       </div>
       <div className="details">
         <p>Flight duration - {hours} hours {minutes} minutes</p>
-        <Link to="#">Details</Link>
+        <button onClick={handleClick}>Details</button>
       </div>
+      {details && <FlightDetail flight={flight} hours={hours} minutes={minutes}/>}
     </div>
   );
 
