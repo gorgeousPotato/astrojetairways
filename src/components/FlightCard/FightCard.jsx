@@ -46,9 +46,9 @@ export default function FlightCard({flight, passengers}) {
       </div>
       <div className="details">
         <p>Flight duration - {hours} hours {minutes} minutes</p>
-        <button onClick={handleClick}>Details</button>
+        <button onClick={handleClick} className="details-btn">Details {!details ? <i class="fa-solid fa-chevron-down"></i> : <i class="fa-solid fa-chevron-up"></i>}</button>
       </div>
-      {details && <FlightDetail flight={flight} hours={hours} minutes={minutes}/>}
+      {details && <FlightDetail flight={flight} hours={hours} minutes={minutes} passengers={passengers}/>}
     </div>
   );
 

@@ -57,7 +57,7 @@ export default function TicketsSearchPage() {
               <option>9</option>
             </select>
           </div>
-          <button type="submit">Search</button>
+          <button type="submit" className="search-btn">Search</button>
         </div>
       </form>
       {found && <FlightsContainer flights={flights} date={info.depDate} passengers={info.passengers}/>}

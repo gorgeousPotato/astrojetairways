@@ -33,3 +33,12 @@
   align-items: center;
 }
 
+.FlightCard .details-btn {
+  color: white;
+  background-color: var(--primary);
+  border: none;
+  cursor: pointer;
+
+}
+
+
