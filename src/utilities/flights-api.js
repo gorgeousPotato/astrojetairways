@@ -17,3 +17,7 @@ const BASE_URL = '/api/flights';
 export function search(url) {
   return sendRequest(url, 'GET');
 }
+
+export function getFlight(url) {
+  return sendRequest(url, 'GET');
+}

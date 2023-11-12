@@ -4,7 +4,7 @@ import { Routes, Route, Navigate } from "react-router-dom"
 import { getUser } from "../../utilities/users-service"
 import AuthPage from "../AuthPage/AuthPage";
 import NavBar from "../../components/NavBar/NavBar";
-import OrderHistoryPage from "../OrderHistoryPage/OrderHistoryPage";
+import CheckoutPage from '../CheckoutPage/CheckoutPage';
 import TicketsSearchPage from "../../pages/TicketsSearchPage/TicketsSearchPage";
 
 export default function App() {
@@ -16,7 +16,7 @@ export default function App() {
         <NavBar user={user} setUser={setUser}/>
         <Routes>
           <Route path="/flights" element={<TicketsSearchPage />}/>
-          <Route path="/orders" element={<OrderHistoryPage />}/>
+          <Route path="/flights/:id" element={<CheckoutPage />}/>
           <Route path="/*" element={<Navigate to="/flights" />} />
         </Routes>
       </>

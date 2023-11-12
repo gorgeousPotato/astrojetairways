@@ -39,7 +39,7 @@ export default function FlightDetailPage({flight, hours, minutes, passengers}) {
               <li><i class="fa-solid fa-suitcase-rolling"></i> 2 pieces x 23 kg baggage allowance</li>
               <li><i class="fa-solid fa-dice"></i> $180 change fee</li>
               <li><i class="fa-solid fa-money-check-dollar"></i> $240 return fee</li>
-              <Link to="#"><button className="select-flight-btn" >Select this flight</button></Link>
+              <Link to={`/flights/${flight._id}?class=economy&passengers=${passengers}`}><button className="select-flight-btn" >Select this flight</button></Link>
             </ul>
           </div>
           <div className="business">
@@ -50,7 +50,7 @@ export default function FlightDetailPage({flight, hours, minutes, passengers}) {
               <li><i class="fa-solid fa-suitcase-rolling"></i> 2 pieces x 23 kg baggage allowance</li>
               <li><i class="fa-solid fa-dice"></i> Change without fee</li>
               <li><i class="fa-solid fa-money-check-dollar"></i> Full refund</li>
-              <Link to="#"><button className="select-flight-btn" >Select this flight</button></Link>
+              <Link to={`/flights/${flight._id}?class=business&passengers=${passengers}`}><button className="select-flight-btn" >Select this flight</button></Link>
             </ul>
           </div>
         </div>
