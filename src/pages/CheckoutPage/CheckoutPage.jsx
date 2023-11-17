@@ -19,6 +19,7 @@ export default function CheckoutPage() {
   });
   const [passengers, setPassengers] = useState('0');
   const [flightClass, setFlightClass] = useState('economy');
+  const [passNames, setPassNames] = useState([]);
   const {id} = useParams();
   const url = new URL(window.location.href);
   const location = useLocation();
@@ -54,7 +55,26 @@ export default function CheckoutPage() {
   // const priceB = flight.busPrice * passengers;
   const price = flightClass === 'economy' ? flight.ecoPrice * passengers : flight.busPrice * passengers;
   
+  function onInputChange(index, fieldName, value) {
+    const updatedPassData = [...passNames];
+    updatedPassData[index] = {
+      ...updatedPassData[index], 
+      [fieldName]: value,
+    }
+    setPassNames(updatedPassData);
+  }
 
+  async function handleClick() {
+    const ticketPromises = passNames.map(async (pass, key) => {
+      const newTicket = {
+        flight: flight._id,
+        firstName: pass.firstName,
+        lastName: pass.lastName,
+      };
+      return await flightsAPI.addTicket(flight._id, newTicket);
+    }) 
+    const newTickets = await Promise.all(ticketPromises);
+  }
   return (
     <div className="CheckoutPage">
       <h1>Flight from {flight.departure} ({flight.spaceportD}) to {flight.arrival} ({flight.spaceportA})</h1>
@@ -87,8 +107,8 @@ export default function CheckoutPage() {
         </div>
         <div className="passengers">
           <h3>Passengers information</h3>
-          <PassengerForm passengers={passengers}/>
-          <button className="buy-btn">Buy tickets</button>
+          <PassengerForm passengers={passengers} onInputChange={onInputChange}/>
+          <button className="buy-btn" onClick={handleClick}>Buy tickets</button>
         </div>
       </div>
     </div>

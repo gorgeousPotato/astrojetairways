@@ -21,3 +21,7 @@ export function search(url) {
 export function getFlight(id) {
   return sendRequest(`${BASE_URL}/${id}`);
 }
+
+export function addTicket(id, data) {
+  return sendRequest(`${BASE_URL}/${id}/tickets`, 'POST', data);
+}
