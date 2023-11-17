@@ -1,0 +1,64 @@
+.CheckoutPage {
+  text-align: left;
+  margin: 1.2rem;
+  padding: 1.6rem;
+  background: rgba(0, 0, 0, 0.7);
+  border-radius: 2rem;;
+}
+
+.CheckoutPage .grid-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 2fr;
+  gap: 2rem
+}
+
+.CheckoutPage .flex-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-right: 4rem;
+}
+
+.CheckoutPage .line {
+  background-image: url(../../../public/Vector-3.png);
+  background-size: cover;
+  background-position: center center;
+  height: 3rem;
+  width: 16rem;
+}
+
+.CheckoutPage i {
+  margin-bottom: 1.2rem;
+}
+
+.CheckoutPage .price-details {
+  margin-left: 2rem;
+  width: 50%
+}
+
+.price-details p{
+  margin-left: 2rem;
+}
+
+.price-details h5{
+  margin-top: 2rem;
+  margin-bottom: 1.6rem;
+}
+
+.passengers h3 {
+  padding-bottom: 1rem;;
+}
+
+.CheckoutPage .buy-btn {
+  font-size: 1.6rem;
+  margin-top: 1rem;
+  border: none;
+  background-color: var(--tertiary);
+  border-radius: 100px;
+  padding: .2rem 2rem;
+}
+
+.CheckoutPage .buy-btn:hover {
+  background-color: var(--secondary);
+}

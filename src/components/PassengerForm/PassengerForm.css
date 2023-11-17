@@ -1,0 +1,13 @@
+.PassengerForm .passenger{
+  display: flex;
+  flex-direction: column;
+  width: 70%;
+  margin-bottom: 2rem;
+}
+
+.passenger input {
+  border: none;
+  border-radius: 100px;
+  padding-left: 1rem;
+}
+
