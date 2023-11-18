@@ -11,7 +11,8 @@ const flightSchema = new Schema({
   arrDate: {type: Date},
   ecoPrice: {type: Number},
   busPrice: {type: Number},
-  aircraft: {type: String}
+  aircraft: {type: String},
+  gate: {type: String},
 }, {
   timestamps: true,
 }
