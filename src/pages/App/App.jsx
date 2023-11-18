@@ -6,6 +6,7 @@ import AuthPage from "../AuthPage/AuthPage";
 import NavBar from "../../components/NavBar/NavBar";
 import CheckoutPage from '../CheckoutPage/CheckoutPage';
 import TicketsSearchPage from "../../pages/TicketsSearchPage/TicketsSearchPage";
+import TicketsPage from '../TicketsPage/TicketsPage';
 
 export default function App() {
   const [user, setUser] = useState(getUser());
@@ -17,6 +18,7 @@ export default function App() {
         <Routes>
           <Route path="/flights" element={<TicketsSearchPage />}/>
           <Route path="/flights/:id" element={<CheckoutPage />}/>
+          <Route path="/flights/:id/tickets" element={<TicketsPage />}/>
           <Route path="/*" element={<Navigate to="/flights" />} />
         </Routes>
       </>

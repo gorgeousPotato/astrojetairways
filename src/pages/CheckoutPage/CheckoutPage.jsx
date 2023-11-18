@@ -1,5 +1,5 @@
 import {useState, useEffect} from "react";
-import { useParams, useLocation  } from "react-router-dom";
+import { useParams, useLocation, useNavigate } from "react-router-dom";
 import * as flightsAPI from "../../utilities/flights-api";
 import PassengerForm from "../../components/PassengerForm/PassengerForm";
 import "./CheckoutPage.css"
@@ -63,7 +63,8 @@ export default function CheckoutPage() {
     }
     setPassNames(updatedPassData);
   }
-
+  
+  const navigate = useNavigate();
   async function handleClick() {
     const ticketPromises = passNames.map(async (pass, key) => {
       const newTicket = {
@@ -74,6 +75,7 @@ export default function CheckoutPage() {
       return await flightsAPI.addTicket(flight._id, newTicket);
     }) 
     const newTickets = await Promise.all(ticketPromises);
+    navigate(`/flights/${flight._id}/tickets`);
   }
   return (
     <div className="CheckoutPage">

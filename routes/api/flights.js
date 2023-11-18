@@ -11,4 +11,8 @@ router.get('/:id', flightsCtrl.show);
 //POST /api/flights/:id/tickets
 router.post('/:id/tickets', flightsCtrl.create);
 
+//GET /api/flights/:id/tickets
+router.get('/:id/tickets', flightsCtrl.showTickets);
+
+
 module.exports = router;

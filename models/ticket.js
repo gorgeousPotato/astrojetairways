@@ -6,6 +6,10 @@ const ticketSchema = new Schema({
     type: Schema.Types.ObjectId,
     ref: "Flight",
   },
+  user: {
+    type: Schema.Types.ObjectId,
+    ref: "User",
+  },
   firstName: String,
   lastName: String,
 }, {

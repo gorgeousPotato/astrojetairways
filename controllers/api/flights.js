@@ -6,6 +6,7 @@ module.exports = {
   search,
   show,
   create,
+  showTickets,
 }
 
 async function search(req,res) {
@@ -32,9 +33,24 @@ async function show(req,res) {
 
 async function create(req,res) {
   try {
+    req.body.user = req.user;
     const ticket = await Ticket.create(req.body);
     console.log(ticket);
     res.json(ticket);
+  } catch(err) {
+    res.status(400).json(err);
+  }
+}
+
+async function showTickets(req,res) {
+  console.log('hi');
+  try {
+    const tickets = await Ticket.find({
+      user: req.user,
+      flight: req.params.id,
+    });
+    console.log(tickets);
+    res.json(tickets);
   } catch(err) {
     res.status(400).json(err);
   }
