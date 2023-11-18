@@ -1,0 +1,13 @@
+.TicketCard {
+  text-align: left;
+}
+
+.TicketCard .grid-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr;
+}
+
+.TicketCard .grid-container .pass-name {
+  grid-column: 1/4 ;
+}
