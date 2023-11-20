@@ -54,7 +54,9 @@ export default function CheckoutPage() {
   // const priceE = flight.ecoPrice * passengers;
   // const priceB = flight.busPrice * passengers;
   const price = flightClass === 'economy' ? flight.ecoPrice * passengers : flight.busPrice * passengers;
-  
+  const base = price * 0.8; 
+  const fuel = price * 0.08; 
+  const taxes = price * 0.12; 
   function onInputChange(index, fieldName, value) {
     const updatedPassData = [...passNames];
     updatedPassData[index] = {
@@ -103,9 +105,9 @@ export default function CheckoutPage() {
           <h3>Price Details</h3>
           <h5>Flight price - ${price}</h5>
           <hr></hr>
-          <p>Base fare - ${price * 0.8}</p>
-          <p>Fuel surcharge - ${price * 0.08}</p>
-          <p>Taxes and fees - ${price * 0.12}</p>
+          <p>Base fare - ${base.toFixed(2)}</p>
+          <p>Fuel surcharge - ${fuel.toFixed(2)}</p>
+          <p>Taxes and fees - ${taxes.toFixed(2)}</p>
         </div>
         <div className="passengers">
           <h3>Passengers information</h3>

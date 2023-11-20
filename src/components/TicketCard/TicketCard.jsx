@@ -17,6 +17,9 @@ export default function TicketCard({ticket, flight}) {
   }
   return (
     <div className="TicketCard">
+      <div className="top">
+        <h3>AstroJet</h3>
+      </div>
       <div className="grid-container">
         <div className="flex-col pass-name">
           <p>PASSENGER</p>

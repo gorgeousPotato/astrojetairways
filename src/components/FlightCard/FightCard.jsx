@@ -4,7 +4,7 @@ import FlightDetail from "../FlightDetail/FlightDetail";
 import "./FlightCard.css"
 
 export default function FlightCard({flight, passengers}) {
-  const [details, setDetails] = useState("false");
+  const [details, setDetails] = useState(false);
   function getTime(ISOdate) {
     const date = new Date(ISOdate);
     const hours = date.getHours().toString().padStart(2, '0');  

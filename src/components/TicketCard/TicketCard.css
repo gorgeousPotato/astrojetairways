@@ -1,13 +1,35 @@
 .TicketCard {
   text-align: left;
+  margin: 1.2rem;
+  background-color: aliceblue;
+  color: black;
+  border-radius: 2rem;
 }
 
 .TicketCard .grid-container {
+  padding: 1.6rem;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   grid-template-rows: 1fr 1fr 1fr;
+  
 }
 
 .TicketCard .grid-container .pass-name {
   grid-column: 1/4 ;
+}
+
+.TicketCard .grid-container p {
+  margin-top: 2rem;
+  margin-bottom: .2rem;
+}
+
+.TicketCard .top {
+  background-color: var(--tertiary);
+  color: white;
+  border-radius: 2rem 2rem 0 0;
+  padding: 1rem 2rem;
+}
+
+.TicketCard p {
+  color: var(--tertiary)
 }
