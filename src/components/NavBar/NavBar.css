@@ -1,3 +1,11 @@
 .NavBar {
+  /* background-image: url(../../../public/ivana-cajina-asuyh-_ZX54-unsplash.jpg);
+  background-size: cover;
+  background-position: center center; */
   background-color: black;
+  padding: 1rem 2rem;
+  margin-top: 0;
+  position: sticky;
+  top: 0;
 }
+
