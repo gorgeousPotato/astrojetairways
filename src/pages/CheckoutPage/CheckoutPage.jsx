@@ -28,6 +28,7 @@ export default function CheckoutPage() {
   const classN = searchParams.get('class');
   
   useEffect(function() {
+    window.scrollTo(0, 0);
     async function getFlight(idx) {
       const flight = await flightsAPI.getFlight(idx);
       setFlight(flight);
@@ -81,11 +82,11 @@ export default function CheckoutPage() {
   }
   return (
     <div className="CheckoutPage">
-      <h1>Flight from {flight.departure} ({flight.spaceportD}) to {flight.arrival} ({flight.spaceportA})</h1>
-      <h3>{flight.depDate.substring(8,10)} {getMonthFromDate(flight.depDate)} {flight.depDate.substring(0, 4)}</h3>
+      <h1>Flight from <span className="tertiary">{flight.departure} ({flight.spaceportD})</span> to <span className="tertiary">{flight.arrival} ({flight.spaceportA})</span></h1>
+      <h3 className="tertiary">{flight.depDate.substring(8,10)} {getMonthFromDate(flight.depDate)} {flight.depDate.substring(0, 4)}</h3>
       <div className="grid-container">
         <div className="flex-row">
-          <div className="flex-icon">
+          <div className="flex-icon tertiary">
             <i class="fa-solid fa-rocket fa-xl icon-2"></i>
             <div>
               <h3>{flight.departure}</h3>
@@ -93,7 +94,7 @@ export default function CheckoutPage() {
             </div>
           </div>
           <div className="line"></div>
-          <div className="flex-icon">
+          <div className="flex-icon tertiary">
             <i class="fa-solid fa-rocket fa-flip-vertical fa-xl icon-2"></i>
             <div>
               <h3>{flight.arrival}</h3>
@@ -103,16 +104,21 @@ export default function CheckoutPage() {
         </div>
         <div className="price-details">
           <h3>Price Details</h3>
-          <h5>Flight price - ${price}</h5>
+          <h5 className="secondary">Flight price - ${price}</h5>
           <hr></hr>
           <p>Base fare - ${base.toFixed(2)}</p>
           <p>Fuel surcharge - ${fuel.toFixed(2)}</p>
           <p>Taxes and fees - ${taxes.toFixed(2)}</p>
+
         </div>
         <div className="passengers">
           <h3>Passengers information</h3>
           <PassengerForm passengers={passengers} onInputChange={onInputChange}/>
           <button className="buy-btn" onClick={handleClick}>Buy tickets</button>
+        </div>
+        <div className="spaceship">
+          <h3>Spaceship</h3>
+          <h5 className="secondary">{flight.aircraft}</h5>
         </div>
       </div>
     </div>

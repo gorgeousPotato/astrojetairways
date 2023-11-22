@@ -7,5 +7,16 @@
   margin-top: 0;
   position: sticky;
   top: 0;
+  z-index: 1;
+}
+
+.NavBar .logout-btn {
+  border: none;
+  background-color: var(--primary);
+  color: rgb(113, 113, 113);
+}
+
+.NavBar .logout-btn:hover {
+  color: white;
 }
 

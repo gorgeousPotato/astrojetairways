@@ -1,5 +1,5 @@
 .TicketsSearchPage {
-  margin-top: 2rem;
+  margin: 2rem 3rem;
 }
 
 .TicketsSearchPage form {
@@ -9,8 +9,8 @@
   margin: 0 1.2rem;
   background: rgba(0, 0, 0, 0.7);
   padding: 1.6rem;
-  border-radius: 2rem;;
-  
+  border-radius: 2rem;
+  margin-top: 4rem;
 
 }
 

@@ -1,4 +1,13 @@
 .FlightsContainer {
-  margin: 1.2rem;
+  margin: 2.4rem 1.2rem;
   text-align: left;
+}
+
+
+.FlightsContainer .title {
+  margin-bottom: 2rem;
+}
+
+.FlightsContainer .tertiary {
+  color: var(--tertiary)
 }

@@ -32,7 +32,7 @@ export default function FlightDetailPage({flight, hours, minutes, passengers}) {
             <p>{flight.arrival} Interstellar Spaceport ({flight.spaceportA})</p>
           </div>
           <div className="econom">
-            <h5>Economy - ${flight.ecoPrice * passengers}</h5>
+            <h5>Economy - <span className="price">${flight.ecoPrice * passengers}</span></h5>
             <ul>
               <li><i class="fa-solid fa-suitcase"></i> 1 piece x 8 kg cabin baggage</li>
               <li><i class="fa-solid fa-utensils"></i> Meal service</li>
@@ -43,7 +43,7 @@ export default function FlightDetailPage({flight, hours, minutes, passengers}) {
             </ul>
           </div>
           <div className="business">
-            <h5>Business - ${flight.busPrice * passengers}</h5>
+            <h5>Business - <span className="price">${flight.busPrice * passengers}</span></h5>
             <ul>
               <li><i class="fa-solid fa-suitcase"></i> 1 piece x 8 kg cabin baggage</li>
               <li><i class="fa-solid fa-utensils"></i> Meal service</li>

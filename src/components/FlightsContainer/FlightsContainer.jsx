@@ -13,7 +13,7 @@ export default function FlightsContainer({flights, date, passengers}) {
     }
   return (
     <div className="FlightsContainer">
-      {flights.length && <h3>{flights[0].departure} to {flights[0].arrival} on {date.substring(8,10)} {getMonthFromDate(date)} {date.substring(0, 4)}</h3>}
+      {flights.length && <h3 className="title">{flights[0].departure} to {flights[0].arrival} on <span className="tertiary">{date.substring(8,10)} {getMonthFromDate(date)} {date.substring(0, 4)}</span></h3>}
       {flights.length ? flightsList : <h3>Seems like there're no flights on {date}. Try another date!</h3>}
     </div>
   );

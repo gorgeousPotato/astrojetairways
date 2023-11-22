@@ -3,6 +3,7 @@
   padding: 1.6rem;
   border-radius: 2rem;
   margin-bottom: 1rem;
+  
 }
 
 
@@ -39,6 +40,14 @@
   border: none;
   cursor: pointer;
 
+}
+
+.FlightCard h3 {
+  color: var(--tertiary);
+}
+
+.FlightCard i {
+  color: var(--tertiary);
 }
 
 
