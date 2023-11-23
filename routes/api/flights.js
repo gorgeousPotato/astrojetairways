@@ -14,5 +14,8 @@ router.post('/:id/tickets', flightsCtrl.create);
 //GET /api/flights/:id/tickets
 router.get('/:id/tickets', flightsCtrl.showTickets);
 
+//GET /api/flights/history
+router.get('/history', flightsCtrl.showHistory);
+
 
 module.exports = router;

@@ -7,6 +7,7 @@ module.exports = {
   show,
   create,
   showTickets,
+  showHistory,
 }
 
 async function search(req,res) {
@@ -43,13 +44,25 @@ async function create(req,res) {
 }
 
 async function showTickets(req,res) {
-  console.log('hi');
   try {
     const tickets = await Ticket.find({
       user: req.user,
       flight: req.params.id,
     });
     console.log(tickets);
+    res.json(tickets);
+  } catch(err) {
+    res.status(400).json(err);
+  }
+}
+
+async function showHistory(req,res) {
+  console.log(req.user);
+  try {
+    const tickets = await Ticket.find({
+      user: req.user,
+    });
+    // console.log(tickets);
     res.json(tickets);
   } catch(err) {
     res.status(400).json(err);

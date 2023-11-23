@@ -20,9 +20,9 @@ export default function NavBar({ user, setUser }) {
           <ul class="navbar-nav col-lg-6 justify-content-lg-center">
             <li><Link to="/flights" class="nav-link px-2  text-light">Buy a Ticket</Link></li>
             <li><Link to="/offers" class="nav-link px-2  text-light">Special Offers</Link></li>
-            <li><Link to="/services" class="nav-link px-2  text-light">Services</Link></li>
             <li><Link to="/bonus" class="nav-link px-2  text-light">AstroJet Bonus</Link></li>
             <li><Link to="/about" class="nav-link px-2  text-light">About AstroJet</Link></li>
+            <li><Link to="/flights/history" class="nav-link px-2  text-light">Flights history</Link></li>
           </ul>
           <div class="d-lg-flex col-lg-3 justify-content-lg-end">
           <button className="logout-btn" onClick={handleLogout}>Log out</button>

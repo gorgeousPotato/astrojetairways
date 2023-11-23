@@ -29,3 +29,7 @@ export function addTicket(id, data) {
 export function getTickets(id) {
   return sendRequest(`${BASE_URL}/${id}/tickets`)
 }
+
+export function getHistory() {
+  return sendRequest(`${BASE_URL}/history`)
+}

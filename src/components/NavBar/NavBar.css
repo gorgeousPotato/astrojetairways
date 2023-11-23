@@ -3,7 +3,7 @@
   background-size: cover;
   background-position: center center; */
   background-color: black;
-  padding: 1rem 2rem;
+  padding: 1rem 3rem;
   margin-top: 0;
   position: sticky;
   top: 0;
@@ -18,5 +18,16 @@
 
 .NavBar .logout-btn:hover {
   color: white;
+}
+
+.NavBar .logo {
+  font-family: "Rubik Mono One" ;
+  font-size: 2rem;
+  color: var(--tertiary) !important
+}
+
+.NavBar .nav-link:hover {
+  color: var(--tertiary) !important;
+  text-decoration: underline;
 }
 
