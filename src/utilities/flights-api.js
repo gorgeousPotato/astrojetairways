@@ -30,6 +30,6 @@ export function getTickets(id) {
   return sendRequest(`${BASE_URL}/${id}/tickets`)
 }
 
-export function getHistory() {
-  return sendRequest(`${BASE_URL}/history`)
+export function getHistory(user) {
+  return sendRequest(`${BASE_URL}/history/${user._id}`)
 }

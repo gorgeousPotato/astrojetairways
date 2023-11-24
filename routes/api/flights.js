@@ -15,7 +15,7 @@ router.post('/:id/tickets', flightsCtrl.create);
 router.get('/:id/tickets', flightsCtrl.showTickets);
 
 //GET /api/flights/history
-router.get('/history', flightsCtrl.showHistory);
+router.get('/history/:id', flightsCtrl.showHistory);
 
 
 module.exports = router;

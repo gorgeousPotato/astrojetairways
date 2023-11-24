@@ -57,12 +57,11 @@ async function showTickets(req,res) {
 }
 
 async function showHistory(req,res) {
-  console.log(req.user);
   try {
     const tickets = await Ticket.find({
-      user: req.user,
-    });
-    // console.log(tickets);
+      user: req.params.id,
+    }).populate("flight");
+    console.log(tickets);
     res.json(tickets);
   } catch(err) {
     res.status(400).json(err);

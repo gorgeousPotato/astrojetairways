@@ -1,12 +1,12 @@
 .TicketsSearchPage {
-  margin: 2rem 3rem;
+  margin: 2rem 4.2rem;
 }
 
 .TicketsSearchPage form {
   /* display: flex;
   flex-direction: column; */
   text-align: left;
-  margin: 0 1.2rem;
+  /* margin: 0 1.2rem; */
   background: rgba(0, 0, 0, 0.7);
   padding: 1.6rem;
   border-radius: 2rem;
@@ -74,6 +74,16 @@
 
 .TicketsSearchPage .search-btn:hover {
   background-color: var(--secondary);
+}
+
+.TicketsSearchPage .banner {
+  background-image: url(../../../public/Anything\ worth\ having\ takes\ time..png);
+  background-size: cover;
+  background-position: center center;
+  width: 100%;
+  margin-top: 2rem;
+  height: 70vh;
+  border-radius: 2rem;
 }
 
 

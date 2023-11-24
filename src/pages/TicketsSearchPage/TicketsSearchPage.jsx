@@ -2,6 +2,7 @@ import { useState } from "react";
 import { Navigate } from "react-router-dom";
 import * as flightsAPI from "../../utilities/flights-api";
 import FlightsContainer from "../../components/FlightsContainer/FlightsContainer";
+import BannersFirstPage from "../../components/BannersFirstPage/BannersFirstPage";
 import "./TicketsSearchPage.css";
 
 export default function TicketsSearchPage() {
@@ -60,7 +61,7 @@ export default function TicketsSearchPage() {
           <button type="submit" className="search-btn">Search</button>
         </div>
       </form>
-      {found && <FlightsContainer flights={flights} date={info.depDate} passengers={info.passengers}/>}
+      {found ? <FlightsContainer flights={flights} date={info.depDate} passengers={info.passengers}/> : <BannersFirstPage />}
 
     </div>
   );

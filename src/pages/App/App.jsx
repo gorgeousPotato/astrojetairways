@@ -20,7 +20,7 @@ export default function App() {
           <Route path="/flights" element={<TicketsSearchPage />}/>
           <Route path="/flights/:id" element={<CheckoutPage />}/>
           <Route path="/flights/:id/tickets" element={<TicketsPage />}/>
-          <Route path="/flights/history" element={<FlightsHistory />}/>
+          <Route path="/flights/history" element={<FlightsHistory user={user}/>}/>
           <Route path="/*" element={<Navigate to="/flights" />} />
         </Routes>
       </>

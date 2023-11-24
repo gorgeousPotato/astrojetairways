@@ -1,0 +1,43 @@
+.TicketCardHistory {
+  text-align: left;
+  margin: 2rem 2rem;
+  background-color: aliceblue;
+  color: black;
+  border-radius: 2rem;
+}
+
+.TicketCardHistory .grid-container {
+  padding: 1.6rem;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr;
+  
+}
+
+.TicketCardHistory .grid-container .pass-name {
+  grid-column: 1/4 ;
+}
+
+.TicketCardHistory .grid-container p {
+  margin-top: 2rem;
+  margin-bottom: .2rem;
+}
+
+.TicketCardHistory .top {
+  background-color: var(--tertiary);
+  color: white;
+  border-radius: 2rem 2rem 0 0;
+  padding: 1rem 2rem;
+}
+
+.TicketCardHistory .top {
+  background-color: var(--tertiary);
+  color: white;
+  font-family: "Rubik Mono One";
+  border-radius: 2rem 2rem 0 0;
+  padding: 1rem 2rem;
+}
+
+.TicketCardHistory p {
+  color: var(--tertiary)
+}

@@ -1,0 +1,34 @@
+.BannersFirstPage {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  margin-top: 2rem;
+  gap: 2rem;
+}
+
+.BannersFirstPage .small1 {
+  background-image: url(../../../public/Frame\ 1\ \(3\).png);
+  background-size: cover;
+  background-position: center center;
+  width: 100%;
+  height: 60vh;
+  border-radius: 2rem;
+}
+.BannersFirstPage .small2 {
+  background-image: url(../../../public/Frame\ 2\ \(1\).png);
+  background-size: cover;
+  background-position: center center;
+  width: 100%;
+  height: 100%;
+  border-radius: 2rem;
+}
+
+.BannersFirstPage .large {
+  background-image: url(../../../public/Anything\ worth\ having\ takes\ time..png);
+  background-size: cover;
+  background-position: center center;
+  width: 100%;
+  height: 40vh;
+  grid-column: 1/3;
+  border-radius: 2rem;
+}
