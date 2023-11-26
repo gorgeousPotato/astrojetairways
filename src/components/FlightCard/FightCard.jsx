@@ -1,5 +1,6 @@
 import {Link} from "react-router-dom";
 import {useState} from "react";
+import {CSSTransition} from "react-transition-group";
 import FlightDetail from "../FlightDetail/FlightDetail";
 import "./FlightCard.css"
 
@@ -48,7 +49,13 @@ export default function FlightCard({flight, passengers}) {
         <p>Flight duration - {hours} hours {minutes} minutes</p>
         <button onClick={handleClick} className="details-btn">Details {!details ? <i class="fa-solid fa-chevron-down"></i> : <i class="fa-solid fa-chevron-up"></i>}</button>
       </div>
-      {details && <FlightDetail flight={flight} hours={hours} minutes={minutes} passengers={passengers}/>}
+      <CSSTransition
+        in={details}
+        timeout={300}
+        classNames="dropdown"
+        unmountOnExit>
+        <FlightDetail flight={flight} hours={hours} minutes={minutes} passengers={passengers}/>
+      </CSSTransition>
     </div>
   );
 
