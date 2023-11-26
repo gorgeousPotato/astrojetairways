@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { Navigate } from "react-router-dom";
+import {CSSTransition} from "react-transition-group";
 import * as flightsAPI from "../../utilities/flights-api";
 import FlightsContainer from "../../components/FlightsContainer/FlightsContainer";
 import BannersFirstPage from "../../components/BannersFirstPage/BannersFirstPage";
@@ -61,7 +62,24 @@ export default function TicketsSearchPage() {
           <button type="submit" className="search-btn">Search</button>
         </div>
       </form>
-      {found ? <FlightsContainer flights={flights} date={info.depDate} passengers={info.passengers}/> : <BannersFirstPage />}
+      <CSSTransition
+        in={found}
+        timeout={300} // Duration of the transition in milliseconds
+        classNames="fade" // CSS class prefix for the transition
+        unmountOnExit
+      >
+        <FlightsContainer flights={flights} date={info.depDate} passengers={info.passengers}/> 
+      </CSSTransition>
+      <CSSTransition
+        in={!found}
+        timeout={300} // Duration of the transition in milliseconds
+        classNames="fade" // CSS class prefix for the transition
+        unmountOnExit
+      >
+        <BannersFirstPage />
+      </CSSTransition>
+      
+      
 
     </div>
   );
