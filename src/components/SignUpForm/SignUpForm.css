@@ -1,0 +1,29 @@
+.SignUpForm form{
+  display: flex;
+  flex-direction: column;
+  
+}
+
+
+.SignUpForm input {
+  font-size: 1.6rem;
+  border:none;
+  border-radius: 100px;
+  padding: .4rem 2rem;
+  margin-right: 1rem;
+  box-shadow: 2px 2px 5px rgb(255, 255, 255, .2);
+}
+
+
+.SignUpForm button {
+  font-size: 1.6rem;
+  margin-top: 3rem;
+  border: none;
+  background-color: var(--tertiary);
+  border-radius: 100px;
+  padding: .4rem 2rem;
+}
+
+.TicketsSearchPage label {
+  margin-top: .4rem;
+}

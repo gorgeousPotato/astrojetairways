@@ -1,0 +1,30 @@
+.AuthPage {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.AuthPage .login-signup {
+  background: rgba(0, 0, 0, 0.7);
+  padding: 1.6rem;
+  border-radius: 2rem;
+  width: 50vw;
+
+}
+
+.AuthPage .p-btn {
+  display: flex;
+  flex-direction: row;
+  align-items: start;
+}
+
+.AuthPage .p-btn button {
+  background: none;
+  border: none;
+  color: var(--tertiary)
+}
+
+.AuthPage .p-btn button:hover {
+  text-decoration: underline;
+}
