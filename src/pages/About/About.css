@@ -1,3 +1,10 @@
 .About {
   margin: 3.2rem;
 }
+
+.About .about-card {
+  background: rgba(0, 0, 0, 0.7);
+  padding: 1.6rem;
+  border-radius: 2rem;
+  
+}

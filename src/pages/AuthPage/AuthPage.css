@@ -1,5 +1,6 @@
 .AuthPage {
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
   height: 100vh;
@@ -27,4 +28,10 @@
 
 .AuthPage .p-btn button:hover {
   text-decoration: underline;
+}
+
+.AuthPage h1 {
+  font-family: "Rubik Mono One" ;
+  font-size: 4rem;
+  color: var(--tertiary)
 }
