@@ -26,21 +26,24 @@ export default function FlightCard({flight, passengers}) {
   return (
     <div className="FlightCard">
       <div className="flex-row">
-        <div className="flex-icon">
-          <i class="fa-solid fa-rocket fa-xl icon-2"></i>
-          <div>
-            <h3>{flight.departure}</h3>
-            <h3>{getTime(flight.depDate)}</h3>
+        <div className="derapt-arrive">
+          <div className="flex-icon">
+            <i class="fa-solid fa-rocket fa-xl icon-2"></i>
+            <div>
+              <h3>{flight.departure}</h3>
+              <h3>{getTime(flight.depDate)}</h3>
+            </div>
+          </div>
+          <div className="flex-icon">
+            <i class="fa-solid fa-rocket fa-flip-vertical fa-xl icon-2"></i>
+            <div>
+              <h3>{flight.arrival}</h3>
+              <h3>{getTime(flight.arrDate)}</h3>
+            </div>
           </div>
         </div>
-        <div className="flex-icon">
-          <i class="fa-solid fa-rocket fa-flip-vertical fa-xl icon-2"></i>
-          <div>
-            <h3>{flight.arrival}</h3>
-            <h3>{getTime(flight.arrDate)}</h3>
-          </div>
-        </div>
-        <div>
+        
+        <div className="prices">
           <p>Economy - ${priceE}</p>
           <p>Business - ${priceB}</p>
         </div>

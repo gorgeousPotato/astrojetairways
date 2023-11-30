@@ -108,7 +108,7 @@
 
 @media (max-width: 801px) {
   .TicketsSearchPage {
-    margin-top: 2rem;
+    margin: 2rem 2rem;
   }
   
   .TicketsSearchPage form {
@@ -145,6 +145,17 @@
   
   .TicketsSearchPage label {
     margin-top: .4rem;
+  }
+
+  .TicketsSearchPage .input-i {
+    position: absolute; 
+    left: 15px; 
+    top: 3.4rem; 
+    color: gray;
+  }
+
+  .rocket input {
+    padding-left: 4rem;
   }
 
 } 
