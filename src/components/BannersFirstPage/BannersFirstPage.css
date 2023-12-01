@@ -30,7 +30,7 @@
 .BannersFirstPage .large {
   background-image: url(../../../public/Anything\ worth\ having\ takes\ time..png);
   background-size: cover;
-  background-position: center center;
+  background-position: right center;
   width: 100%;
   height: 30vh;
   grid-column: 1/3;
