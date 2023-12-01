@@ -26,7 +26,7 @@ export default function FlightCard({flight, passengers}) {
   return (
     <div className="FlightCard">
       <div className="flex-row">
-        <div className="derapt-arrive">
+        {/* <div className="derapt-arrive"> */}
           <div className="flex-icon">
             <i class="fa-solid fa-rocket fa-xl icon-2"></i>
             <div>
@@ -41,7 +41,7 @@ export default function FlightCard({flight, passengers}) {
               <h3>{getTime(flight.arrDate)}</h3>
             </div>
           </div>
-        </div>
+        {/* </div> */}
         
         <div className="prices">
           <p>Economy - ${priceE}</p>

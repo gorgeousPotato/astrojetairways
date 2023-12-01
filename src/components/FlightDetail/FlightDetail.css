@@ -1,6 +1,6 @@
 .FlightDetail .grid-container{
   
-  height: 15rem;
+  /* height: 15rem; */
   display: grid;
   grid-template-columns: 1fr 1fr 3fr 3fr 3fr;
   margin-top: 2rem;
@@ -54,6 +54,25 @@
 
 .FlightDetail .price {
   color: var(--secondary)
+}
+
+@media (max-width: 801px) {
+  .FlightDetail .grid-container{
+    display: flex;
+    flex-direction: column;
+  }
+
+  .FlightDetail .duration {
+    display: none;
+  }
+
+  .FlightDetail .graph {
+    display: none;
+  }
+
+  .FlightDetail .info {
+    display: none;
+  }
 }
 
 

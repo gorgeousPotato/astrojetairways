@@ -11,7 +11,6 @@ export default function FlightDetailPage({flight, hours, minutes, passengers}) {
   
   return (
     <div className="FlightDetail">
-        <h5>Flight Details</h5>
         <div className="grid-container">
           <div className="duration">
             <p>{hours}:{minutes}</p>

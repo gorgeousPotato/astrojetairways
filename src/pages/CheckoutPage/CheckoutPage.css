@@ -74,3 +74,18 @@
 .CheckoutPage .spaceship {
   margin-left: 2rem;
 }
+
+@media (max-width: 801px) {
+  .CheckoutPage .grid-container {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .CheckoutPage>h3 {
+    margin: 2rem 0;
+  }
+
+  .CheckoutPage .spaceship {
+    display: none;
+  }
+}
