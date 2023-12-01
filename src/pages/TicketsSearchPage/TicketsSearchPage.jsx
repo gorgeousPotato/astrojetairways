@@ -6,7 +6,7 @@ import FlightsContainer from "../../components/FlightsContainer/FlightsContainer
 import BannersFirstPage from "../../components/BannersFirstPage/BannersFirstPage";
 import "./TicketsSearchPage.css";
 
-export default function TicketsSearchPage() {
+export default function TicketsSearchPage({user}) {
   const [info, setInfo] = useState({
     departure: '',
     arrival: '',
@@ -25,18 +25,28 @@ export default function TicketsSearchPage() {
     setFound(true);
     setFlights(result);
   }
+  function capitalize(inputString) {
+    if (inputString.length === 0) {
+      return "";
+    }
+    const capitalizedString =
+      inputString.charAt(0).toUpperCase() + inputString.slice(1).toLowerCase();
+  
+    return capitalizedString;
+  }
   return (
     <div className="TicketsSearchPage">
+      <h3>Hi, {user.name}! Which celestial destination calls to you for an interplanetary adventure?</h3>
       <form onSubmit={handleSearch}>
         <div className="inputs-container">
         <div className="flex-col  rocket">
           <label>Planet of Departure</label>
-          <input name="departure" value={info.departure} onChange={handleChange}></input>
+          <input name="departure" value={capitalize(info.departure)} onChange={handleChange} autoComplete="off"></input>
           <i class="fa-solid fa-rocket fa-xl input-i"></i>
         </div>
         <div className="flex-col rocket">
           <label>Planet of Arrival</label>
-          <input name="arrival" value={info.arrival} onChange={handleChange}></input>
+          <input name="arrival" value={capitalize(info.arrival)} onChange={handleChange} autoComplete="off"></input>
           <i class="fa-solid fa-rocket fa-flip-vertical fa-xl input-i"></i>
         </div>
         <div className="flex-col">

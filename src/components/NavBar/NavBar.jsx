@@ -19,8 +19,6 @@ export default function NavBar({ user, setUser }) {
           <a class="navbar-brand col-lg-3 me-0 text-white logo" href="/flights">AstroJet</a>
           <ul class="navbar-nav col-lg-6 justify-content-lg-center">
             <li><Link to="/flights" class="nav-link px-2  text-light">Buy a Ticket</Link></li>
-            <li><Link to="/offers" class="nav-link px-2  text-light">Special Offers</Link></li>
-            <li><Link to="/bonus" class="nav-link px-2  text-light">AstroJet Bonus</Link></li>
             <li><Link to="/about" class="nav-link px-2  text-light">About AstroJet</Link></li>
             <li><Link to="/flights/history" class="nav-link px-2  text-light">Flights history</Link></li>
           </ul>

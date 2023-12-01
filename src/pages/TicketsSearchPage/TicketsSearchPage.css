@@ -10,9 +10,13 @@
   background: rgba(0, 0, 0, 0.7);
   padding: 1.6rem;
   border-radius: 2rem;
-  margin-top: 4rem;
+  margin-top: 2rem;
 
 }
+
+.TicketsSearchPage h1 {
+  margin-bottom: 0rem;
+} 
 
 .TicketsSearchPage input {
   font-size: 1.6rem;

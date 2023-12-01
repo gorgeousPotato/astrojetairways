@@ -18,7 +18,7 @@ export default function App() {
       <>
         <NavBar user={user} setUser={setUser}/>
         <Routes>
-          <Route path="/flights" element={<TicketsSearchPage />}/>
+          <Route path="/flights" element={<TicketsSearchPage user={user}/>}/>
           <Route path="/flights/:id" element={<CheckoutPage />}/>
           <Route path="/flights/:id/tickets" element={<TicketsPage />}/>
           <Route path="/flights/history" element={<FlightsHistory user={user}/>}/>
